@@ -1,0 +1,14 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  data:
+    mongodb:
+      uri: mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_CLUSTER}/${MONGO_DATABASE}?retryWrites=true&w=majority
+
+logging:
+  level:
+    root: ERROR
+    com.delivery: INFO
+  file:
+    name: /var/log/delivery-service/application.log

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: delivery-service
+  data:
+    mongodb:
+      auto-index-creation: true
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
